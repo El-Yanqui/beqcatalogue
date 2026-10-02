@@ -9,12 +9,12 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: beqcatalogue
     steps:
       - uses: octokit/request-action@v2.x
-        with:
-          route: POST /repos/{owner}/{repo}/dispatches
-          owner: El_Yanqui
-          repo: beqcatalogue
-          event_type: 'trigger'
         env:
           GITHUB_TOKEN: ${{ secrets.TRIGGER_BEQCATALOGUE }}
+        with:
+          route: POST /repos/El-Yanqui/beqcatalogue/dispatches
+          event_type: 'trigger'
+#test
