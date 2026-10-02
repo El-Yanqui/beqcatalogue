@@ -13,7 +13,7 @@ jobs:
       - uses: octokit/request-action@v3
         with:
           route: POST /repos/{owner}/{repo}/dispatches
-          owner: 3ll3d00d
+          owner: El_Yanqui
           repo: beqcatalogue
           event_type: 'trigger'
         env:
